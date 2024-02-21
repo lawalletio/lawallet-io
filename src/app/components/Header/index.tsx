@@ -1,15 +1,18 @@
 'use client';
 
 import Image from 'next/image';
+import { useForm, ValidationError } from '@formspree/react';
 import { Text, Button, Container, Flex, Heading, Input, InputGroup, InputGroupRight, theme } from '@lawallet/ui';
 
 import { HeaderPrimitive } from './style';
 
 export default function Header() {
+  const [state, handleSubmit] = useForm('mpzvdgez');
+
   return (
     <HeaderPrimitive>
       <Container size='small'>
-        <Flex direction='column' gap={16}>
+        <Flex direction='column' align='center' gap={16}>
           <Flex direction='column' gap={8} align='center'>
             <Text size='small' color={theme.colors.gray50}>
               Open Source Wallet
@@ -19,14 +22,24 @@ export default function Header() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.
             </Text>
           </Flex>
-          <InputGroup>
-            <Input placeholder='satoshi@gmail.com' />
-            <InputGroupRight>
-              <Button variant='borderless' size='small'>
-                Suscribe
-              </Button>
-            </InputGroupRight>
-          </InputGroup>
+          {state.succeeded ? (
+            <Flex justify='center'>
+              <Text isBold>Thanks for joining!</Text>
+            </Flex>
+          ) : (
+            <form onSubmit={handleSubmit}>
+              <InputGroup>
+                <Input placeholder='satoshi@gmail.com' id='email' type='email' name='email' />
+                <InputGroupRight>
+                  <Button variant='borderless' size='small' disabled={state.submitting} type='submit'>
+                    Suscribe
+                  </Button>
+                </InputGroupRight>
+                <ValidationError prefix='Email' field='email' errors={state.errors} />
+                <ValidationError prefix='Message' field='message' errors={state.errors} />
+              </InputGroup>
+            </form>
+          )}
         </Flex>
       </Container>
     </HeaderPrimitive>

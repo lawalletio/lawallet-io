@@ -10,12 +10,6 @@ export const ItemFeaturePrimitive = styled.div`
   gap: 0;
   width: 100%;
 
-  margin: 20px 0;
-
-  @media screen and (min-width: 961px) {
-    flex-direction: row;
-  }
-
   img {
     width: 100%;
     height: auto;
