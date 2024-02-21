@@ -19,6 +19,7 @@ import {
 import Twitter from '../Icons/Twitter';
 import Github from '../Icons/Github';
 import Discord from '../Icons/Discord';
+import Eggs from '../Eggs';
 
 import { FooterPrimitive } from './style';
 
@@ -29,7 +30,11 @@ export default function Footer() {
         <div className='box'>
           <Flex flex={1} justify='space-between' gap={16}>
             <div className='copy'>
-              <Text color={theme.colors.gray50}>made with eggs by</Text>
+              <Flex align='center' gap={4}>
+                <Text color={theme.colors.gray50}>made with</Text>
+                <Eggs />
+                <Text color={theme.colors.gray50}>by</Text>
+              </Flex>
               <Divider y={8} />
               <Link href='https://lacrypta.ar/' target='_blank'>
                 <Image src='/la-crypta-logo.svg' alt='LaCrypta logo' width={135} height={30} />

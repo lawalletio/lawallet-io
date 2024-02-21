@@ -18,9 +18,7 @@ export default function Header() {
               Open Source Wallet
             </Text>
             <Heading>Bitcoin-centric</Heading>
-            <Text align='center'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.
-            </Text>
+            <Text align='center'>Set up a self-hosted modular wallet or offer a federated solution for your users</Text>
           </Flex>
           {state.succeeded ? (
             <Flex justify='center'>
