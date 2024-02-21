@@ -17,12 +17,9 @@ export default function Home() {
       <Container>
         <Divider y={120} />
         <ItemFeature title='Create your lightning domain.' src={'one.png'} number={1}>
-          <Link
-            href='https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Flawalletio%2Flightning-domain&env=LAWALLET_API_DOMAIN,AUTOCREATE_NONCE&project-name=lightning-domain&repository-name=lightning-domain&integration-ids=oac_3sK3gnG06emjIEVL09jjntDD'
-            target='_blank'
-          >
+          <Link href='https://github.com/lawalletio/lightning-domain' target='_blank'>
             <Button size='small' variant='borderless' tabIndex={-1}>
-              Deploy now en Vercel
+              See our repository
             </Button>
           </Link>
         </ItemFeature>
