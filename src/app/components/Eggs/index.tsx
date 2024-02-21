@@ -1,7 +1,5 @@
 'use client';
 
-import path from 'path';
-
 export default function Eggs() {
   return (
     <svg width='33' height='31' viewBox='0 0 33 31' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -35,7 +33,7 @@ export default function Eggs() {
           <feOffset dx='2' dy='4' />
           <feGaussianBlur stdDeviation='2' />
           <feComposite in2='hardAlpha' operator='out' />
-          <feColorMatrix type='matrix' values='0 0 0 0 0.109804 0 0 0 0 0.109804 0 0 0 0 0.109804 0 0 0 1 0' />
+          <feColorMatrix type='matrix' values='0 0 0 0 0.109804 0 0 0 0 0.109804 0 0 0 0 0.109804 0 0 0 0.65 0' />
           <feBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_2319_11122' />
           <feBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_2319_11122' result='shape' />
         </filter>
@@ -47,9 +45,9 @@ export default function Eggs() {
           y2='22.0785'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-color='white' />
-          <stop offset='0.175' stop-color='#F2EFEA' />
-          <stop offset='1' stop-color='#BDB7AF' />
+          <stop stopColor='white' />
+          <stop offset='0.175' stopColor='#F2EFEA' />
+          <stop offset='1' stopColor='#BDB7AF' />
         </linearGradient>
         <linearGradient
           id='paint1_linear_2319_11122'
@@ -59,9 +57,9 @@ export default function Eggs() {
           y2='22.4505'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-color='white' />
-          <stop offset='0.175' stop-color='#F2EFEA' />
-          <stop offset='1' stop-color='#BDB7AF' />
+          <stop stopColor='white' />
+          <stop offset='0.175' stopColor='#F2EFEA' />
+          <stop offset='1' stopColor='#BDB7AF' />
         </linearGradient>
       </defs>
     </svg>
