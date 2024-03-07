@@ -27,7 +27,7 @@ export default function Header() {
           ) : (
             <form onSubmit={handleSubmit}>
               <InputGroup>
-                <Input placeholder='satoshi@gmail.com' id='email' type='email' name='email' />
+                <Input placeholder='satoshi@skiff.com' id='email' type='email' name='email' />
                 <InputGroupRight>
                   <Button variant='borderless' size='small' disabled={state.submitting} type='submit'>
                     Suscribe
